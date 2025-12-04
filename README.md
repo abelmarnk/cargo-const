@@ -71,5 +71,3 @@ Contributions are welcome! Fork the repository, make your changes, and open a pu
 ## License
 
 MIT License
-
-```
