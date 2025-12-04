@@ -1,0 +1,27 @@
+[package]
+name = "cargo-const"
+version = "0.2.0"
+edition = "2021"
+license = "MIT"
+readme = "README.md"
+description = "Crate compatibility helper"
+repository = "https://github.com/abelmarnk/cargo-const"
+
+
+[dependencies]
+cargo-lock = ">=7.0.1"
+clap = { version = "^3.1.2", features = ["derive"] }
+crates_io_api = ">=0.8.2"
+dirs = ">=1.0.0"
+owo-colors = "4.2.3"
+semver = "^1.0.23"
+serde = "^1.0.220"
+serde_cbor = ">=0.10.0"
+thiserror = ">=1.0.1"
+
+
+[workspace]
+members = [
+    "",
+]
+
