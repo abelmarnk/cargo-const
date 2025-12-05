@@ -70,12 +70,7 @@ impl Compat {
             Count::Count(count) => count,
         };
 
-        let versions = versions
-            .iter()
-            .take(upper_bound)
-            .skip(lower_bound)
-            .rev() // Display later versions first
-            .take(count);
+        let versions = versions.iter().take(upper_bound).skip(lower_bound).rev(); // Display later versions first
 
         let versions = versions.filter(|version| self.include_yanked || !version.yanked);
 
@@ -115,7 +110,7 @@ impl Compat {
             Box::new(versions)
         };
 
-        let versions = versions.map(|version| {
+        let versions = versions.take(count).map(|version| {
             let min_rust_version_message = version
                 .rust_version
                 .as_ref()
